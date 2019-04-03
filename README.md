@@ -1,6 +1,7 @@
-<h1 align="center" style="border-bottom:none">东润广告SDK Android</h1>
+<h2 align="center" style="border-bottom:none;">东润广告SDK Android</h2>
 
-[![](https://img.shields.io/badge/release-v1.0.1-brightgreen.svg)](https://github.com/dorunad/DRADSDK_Demo_as/tree/master/app/libs)
+[![release-image]][release-url]
+![minSdkVersion-image]
 
 ## 简介
 **版本历史**
@@ -22,7 +23,7 @@ SDK接入前，请先联系合作方获取需要接入的
 ## 代码混淆
 如果您需要使用 proguard 混淆代码，需确保不要混淆 SDK 的代码。
 可参考 DRADSDK_Demo_as/app/proguard-rules.pro，混淆文件尾部加入：
-```proguard
+```pro
 -keepclassmembers enum * {
     public static **[] values();
     public static ** valueOf(java.lang.String);
@@ -34,5 +35,10 @@ SDK接入前，请先联系合作方获取需要接入的
 
 ## SDK包导入及权限配置
 ### 1.联系合作方获取
+
+[release-image]:https://img.shields.io/badge/release-v1.0.1-brightgreen.svg
+[release-url]:https://github.com/dorunad/DRADSDK_Demo_as/tree/master/app/libs
+
+[minSdkVersion-image]:https://img.shields.io/badge/minSdkVersion-14-yellowgreen.svg
 
 
