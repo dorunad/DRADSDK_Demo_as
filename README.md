@@ -1,14 +1,16 @@
-<div align="center" style="font-size:20px;">东润广告SDK Android</div>
+<h3 align="center">东润广告SDK Android</h3>
 
-[![release-image]][release-url]
-![minSdkVersion-image]
+<!--[![release-image]][release-url]-->
+<!--![minSdkVersion-image]-->
+<div align="center">[![release-image]][release-url] ![minSdkVersion-image]</div>
+
 
 ## 简介
 **版本历史**
 
-| 版本          | 日期          | 备注  |
-| ------------  |:----------------:| ------------|
-| v1.0.1        | 2019/4/3  |  初版  |
+| 版本         | 日期          | 备注  |
+| ------------ |:------------:| ------ |
+| v1.0.1        | 2019/4/3     |  初版  |
 
 东润移动广告SDk(Android)是官方推出的移动广告SDK在Android平台上的版本（以下简称SDK）。
 
@@ -35,6 +37,7 @@ SDK接入前，请先联系合作方获取需要接入的
 
 ## SDK包导入及权限配置
 ### 1.联系合作方获取
+
 
 [release-image]:https://img.shields.io/badge/release-v1.0.1-brightgreen.svg
 [release-url]:https://github.com/dorunad/DRADSDK_Demo_as/tree/master/app/libs
