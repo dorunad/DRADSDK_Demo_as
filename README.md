@@ -1,4 +1,4 @@
-<h1 align="center" style="border-bottom:none">东润广告SDK Android</h1>
+<h1 align="center" style="border-bottom:none;">东润广告SDK Android</h1>
 
 [![](https://img.shields.io/badge/release-v1.0.1-brightgreen.svg)](https://github.com/dorunad/DRADSDK_Demo_as/tree/master/app/libs)
 
