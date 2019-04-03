@@ -22,7 +22,7 @@ SDK接入前，请先联系合作方获取需要接入的
 ## 代码混淆
 如果您需要使用 proguard 混淆代码，需确保不要混淆 SDK 的代码。
 可参考 DRADSDK_Demo_as/app/proguard-rules.pro，混淆文件尾部加入：
-```proguard
+```pro
 -keepclassmembers enum * {
     public static **[] values();
     public static ** valueOf(java.lang.String);
