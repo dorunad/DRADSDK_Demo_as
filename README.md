@@ -1,4 +1,4 @@
-<h2 align="center" style="border-bottom:none;">东润广告SDK Android</h2>
+<div align="center" style="font-size:20px;">东润广告SDK Android</div>
 
 [![release-image]][release-url]
 ![minSdkVersion-image]
