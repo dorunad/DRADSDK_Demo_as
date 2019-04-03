@@ -19,6 +19,16 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+# DRADSDK 混淆配置 start-------------------
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+-keep class com.dr.dradsdk.open.** {*;}
+-keepclassmembers class * extends android.content.BroadcastReceiver {
+   public void *(android.view.View);
+}
+# DRADSDK 混淆配置 end-------------------
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public class * extends com.bumptech.glide.module.AppGlideModule
 -keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
