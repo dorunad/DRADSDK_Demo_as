@@ -265,6 +265,7 @@ public class DrAdActivity extends Activity{
                 SimpleUtil.launchAppDetail(this, mAdSourceData.getAppPackage());
                 break;
             case DRFastenConstant.ACTION.DOWNLOAD://下载
+                //下载只需调用SDK封装的方法，即可完成下载、安装及相关上报
                 DRADManager.getInstance().requestDownload(this, mAdSourceData);
                 break;
             case DRFastenConstant.ACTION.HTML://html
