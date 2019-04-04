@@ -55,32 +55,32 @@ public class DrAdActivity extends BaseActivity<ActivityDradBinding> implements V
             case SPLASH_AD:
                 setTitle("开屏广告");
                 mImpBean.setImpId("2c09d2e58d4aaa874e2a3d181c8f3f08");
-                mImpBean.setAdType(DRFastenConstant.AD_SPLASH);
-                mImpBean.setPos(DRFastenConstant.POS_FULLSCREEN);
+                mImpBean.setAdType(DRFastenConstant.AD.SPLASH);
+                mImpBean.setPos(DRFastenConstant.POS.FULLSCREEN);
                 mImpBean.setWidth(640);
                 mImpBean.setHeight(960);
                 break;
             case BANNER_AD:
                 setTitle("Banner广告");
                 mImpBean.setImpId("be53a65b58fc25cdc4616d74f2da30dd");
-                mImpBean.setAdType(DRFastenConstant.AD_BANNER);
-                mImpBean.setPos(DRFastenConstant.POS_TOP);
+                mImpBean.setAdType(DRFastenConstant.AD.BANNER);
+                mImpBean.setPos(DRFastenConstant.POS.TOP);
                 mImpBean.setWidth(690);
                 mImpBean.setHeight(388);
                 break;
             case INFO_AD:
                 setTitle("信息流广告");
                 mImpBean.setImpId("2849273d544d581e8d2153b95307d300");
-                mImpBean.setAdType(DRFastenConstant.AD_INFO_STREAM);
-                mImpBean.setPos(DRFastenConstant.POS_CENTER);
+                mImpBean.setAdType(DRFastenConstant.AD.INFO_STREAM);
+                mImpBean.setPos(DRFastenConstant.POS.CENTER);
                 mImpBean.setWidth(690);
                 mImpBean.setHeight(388);
                 break;
             case BAIDU_AD:
                 setTitle("百度广告");
                 mImpBean.setImpId("3469e7937b459717d0e003a2bd597da5");
-                mImpBean.setAdType(DRFastenConstant.AD_BAIDU);
-                mImpBean.setPos(DRFastenConstant.POS_CENTER);
+                mImpBean.setAdType(DRFastenConstant.AD.BAIDU);
+                mImpBean.setPos(DRFastenConstant.POS.CENTER);
                 mImpBean.setWidth(690);
                 mImpBean.setHeight(388);
                 break;
@@ -129,11 +129,11 @@ public class DrAdActivity extends BaseActivity<ActivityDradBinding> implements V
         switch (type) {
             case SPLASH_AD:
                 mViewBinding.ivSplash.setVisibility(View.VISIBLE);
-                if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_IMAGE)||mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_MIX_2)) {
+                if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.IMAGE)||mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.MIX_2)) {
                     if (mAdSourceData.getImageList() != null && mAdSourceData.getImageList().size() > 0) {
                         GlideImageLoader.displayImageByUrlWithoutPlace(mViewBinding.ivSplash, mAdSourceData.getImageList().get(0).getSrc());
                     }
-                }else if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_MIX_1)){
+                }else if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.MIX_1)){
                     GlideImageLoader.displayImageByUrlWithoutPlace(mViewBinding.ivSplash, mAdSourceData.getIconSrc());
                 }else {
                     mViewBinding.llNoAd.setVisibility(View.VISIBLE);
@@ -144,11 +144,11 @@ public class DrAdActivity extends BaseActivity<ActivityDradBinding> implements V
                 break;
             case BANNER_AD:
                 mViewBinding.ivBanner.setVisibility(View.VISIBLE);
-                if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_IMAGE)||mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_MIX_2)) {
+                if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.IMAGE)||mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.MIX_2)) {
                     if (mAdSourceData.getImageList() != null && mAdSourceData.getImageList().size() > 0) {
                         GlideImageLoader.displayImageByUrlWithoutPlace(mViewBinding.ivBanner, mAdSourceData.getImageList().get(0).getSrc());
                     }
-                }else if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_MIX_1)){
+                }else if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.MIX_1)){
                     GlideImageLoader.displayImageByUrlWithoutPlace(mViewBinding.ivBanner, mAdSourceData.getIconSrc());
                 }else {
                     mViewBinding.llNoAd.setVisibility(View.VISIBLE);
@@ -159,11 +159,11 @@ public class DrAdActivity extends BaseActivity<ActivityDradBinding> implements V
             case INFO_AD:
             case BAIDU_AD:
                 mViewBinding.llInfo.setVisibility(View.VISIBLE);
-                if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_IMAGE)||mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_MIX_2)) {
+                if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.IMAGE)||mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.MIX_2)) {
                     if (mAdSourceData.getImageList() != null && mAdSourceData.getImageList().size() > 0) {
                         GlideImageLoader.displayImageByUrlWithoutPlace(mViewBinding.ivInfo, mAdSourceData.getImageList().get(0).getSrc());
                     }
-                }else if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE_MIX_1)){
+                }else if (mAdSourceData.getCreativeType().equals(DRFastenConstant.TYPE.MIX_1)){
                     GlideImageLoader.displayImageByUrlWithoutPlace(mViewBinding.ivInfo, mAdSourceData.getIconSrc());
                 }
                 if (!TextUtils.isEmpty(mAdSourceData.getDescription())) {
@@ -228,35 +228,28 @@ public class DrAdActivity extends BaseActivity<ActivityDradBinding> implements V
     private void adClick() {
         Bundle bundle = new Bundle();
         switch (mAdSourceData.getInteractionType()) {
-            case "0"://无动作
-            case "4"://ios appstore下载
-                break;
-            case "1"://打开网页
+            case DRFastenConstant.ACTION.VIEW://打开网页
                 Uri uri = Uri.parse(mAdSourceData.getTargetUrl()); // url为你要链接的地址
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;
-            case "9"://应用内打开
+            case DRFastenConstant.ACTION.IN://应用内打开
                 bundle.putString("title", mAdSourceData.getDescription());
                 bundle.putString("url", mAdSourceData.getTargetUrl());
                 startActivity(WebActivity.class, bundle);
                 break;
-            case "3"://Android应用市场下载
+            case DRFastenConstant.ACTION.OPEN_MARKET://Android应用市场下载
                 SimpleUtil.launchAppDetail(this, mAdSourceData.getAppPackage());
                 break;
-            case "2"://点击下载
-            case "5"://下载
-            case "7":
-            case "8":
-            case "10"://直接下载应用
+            case DRFastenConstant.ACTION.DOWNLOAD://下载
                 DRADManager.getInstance().requestDownload(this, mAdSourceData);
                 break;
-            case "6"://html
+            case DRFastenConstant.ACTION.HTML://html
                 bundle.putString("title", mAdSourceData.getDescription());
                 bundle.putString("param", mAdSourceData.getTargetUrl());
                 startActivity(WebActivity.class, bundle);
                 break;
-            case "11"://app唤醒
+            case DRFastenConstant.ACTION.APP_AWAKE://app唤醒
                 Uri uri1 = Uri.parse(mAdSourceData.getDeeplink_url()); // url为你要链接的地址
                 Intent intent1 = new Intent(Intent.ACTION_VIEW, uri1);
                 startActivity(intent1);
