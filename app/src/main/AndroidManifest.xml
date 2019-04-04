@@ -15,7 +15,7 @@
         <!--下载类 配置fileProvider-->
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
+            android:authorities="${packageName}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

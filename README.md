@@ -76,7 +76,7 @@ dependencies {
 ```xml
 <provider
     android:name="android.support.v4.content.FileProvider"
-    android:authorities="${applicationId}.fileprovider"
+    android:authorities="${packageName}.fileprovider"
     android:exported="false"
     android:grantUriPermissions="true">
     <meta-data
@@ -84,7 +84,7 @@ dependencies {
         android:resource="@xml/dr_file_paths" />
 </provider>
 ```
-+ 注意：`${applicationId}`需要改为您apk运行时的包名。
++ 注意：`${packageName}`为您apk运行时的包名。
 如果 targetSdkVersion 设置值>=24，则强烈建议添加 provider，否则可能会抛异常，甚至会影响 app 变现效率。
 
 ## 广告接入
