@@ -323,10 +323,10 @@ public class DrAdActivity extends Activity{
 
 [demo-url]:https://github.com/dorunad/DRADSDK_Demo_as
 
-[javadoc-url]:https://github.com/dorunad/DRADSDK_Demo_as/DRADSDK_Doc
+[javadoc-url]:https://github.com/dorunad/DRADSDK_Demo_as/tree/master/DRADSDK_Doc
 
 [readme-url]:https://github.com/dorunad/DRADSDK_Demo_as/README.md
 
-[errorCode-url]:https://github.com/dorunad/DRADSDK_Demo_as/DRADSDKv1.0.1错误码对照表.pdf
+[errorCode-url]:https://github.com/dorunad/DRADSDK_Demo_as/blob/master/DRADSDKv1.0.1%E9%94%99%E8%AF%AF%E7%A0%81%E5%AF%B9%E7%85%A7%E8%A1%A8.pdf
 
 
