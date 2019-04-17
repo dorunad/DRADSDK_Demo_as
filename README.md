@@ -41,13 +41,13 @@ SDK的发行版本包括 [AAR 包][release-url]、[Demo 示例][demo-url]、接�
 android {
     repositories {
         flatDir {
-            dirs 'libs' //this way we can find the .aar file in libs folder
+            dirs 'libs'
         }
     }
 }
 
 dependencies {
-    implementation(name:'dradsdk_v1.0.1',ext:'aar')
+    implementation(name:'dradsdk_v1.0.1_20190417',ext:'aar')
 }
 ```
 点击 `Sync Now` 等待同步结束。

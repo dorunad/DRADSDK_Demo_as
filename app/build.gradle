@@ -15,7 +15,7 @@ android {
     }
     buildTypes {
         debug {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
@@ -41,5 +41,5 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.7.1'
 
-    implementation(name:'dradsdk_v1.0.1',ext:'aar')
+    implementation(name:'dradsdk_v1.0.1_20190417',ext:'aar')
 }
