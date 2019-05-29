@@ -73,6 +73,7 @@ dependencies {
 
 ```
 ### 配置FileProvider
+为了适配7.0及以上的下载和安装相关功能。
 ```xml
 <provider
     android:name="android.support.v4.content.FileProvider"
@@ -87,6 +88,18 @@ dependencies {
 + 注意：`${packageName}`为您apk运行时的包名。
 如果 targetSdkVersion 设置值>=24，则强烈建议添加 provider，否则可能会抛异常，甚至会影响 app 变现效率。
 
+在`res/xml`目录下，新建一个xml文件dr_file_paths.xml，在该文件中添加如下代码：
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="external"
+        path="." />
+    <external-files-path
+        name="down"
+        path="Download" />
+</paths>
+```
 ## 广告接入
 ### 初始化
 在调用SDK代码前，调用初始化方法。
